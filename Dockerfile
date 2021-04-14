@@ -43,11 +43,14 @@ RUN sudo apt-get install -y zsh && \
     git clone https://github.com/zsh-users/zsh-autosuggestions.git && \
     curl https://raw.githubusercontent.com/DigitalTransformation/vs-code-container-with-ssl/main/config/.zshrc >> ~/.zshrc
 
+# APT: Cleanup
+RUN sudo apt-get clean
+
 # Use bash shell
 ENV SHELL=/bin/bash
 
 # NPM: Packages
-RUN sudo npm install -g webpack-cli create-react-app gatsby gulp netlify-cli @aws-amplify/cli @storybook/cli
+RUN sudo npm install -g npm@latest webpack-cli create-react-app gatsby gulp netlify-cli @aws-amplify/cli @storybook/cli
 
 # Copy files:
 # COPY deploy-container/myTool /home/coder/myTool
@@ -56,6 +59,9 @@ RUN sudo npm install -g webpack-cli create-react-app gatsby gulp netlify-cli @aw
 
 # Port
 ENV PORT=8080
+
+# EXPOSE RUNTIME PORTS
+EXPOSE 8443 5000-5010 8000-8010
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
