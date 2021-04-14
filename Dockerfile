@@ -16,7 +16,7 @@ RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
 
 # install
-RUN sudo apt-get install -y ansible apt-transport-https build-essential ca-certificates chromium-browser ffmpeg gnupg-agent htop iputils-ping libffi-dev libssl-dev python3 python3-dev python3-pip ranger software-properties-common sshpass systemd tree unzip vim wget youtube-dl unzip -y
+RUN sudo apt-get install -y ansible apt-transport-https build-essential ca-certificates ffmpeg gnupg-agent htop iputils-ping libffi-dev libssl-dev python3 python3-dev python3-pip ranger software-properties-common sshpass systemd tree unzip vim wget youtube-dl unzip -y
 
 #rclone (support for remote filesystem)
 RUN curl https://rclone.org/install.sh | sudo bash
