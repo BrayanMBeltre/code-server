@@ -1,7 +1,34 @@
 {
-  "workbench.colorTheme": "Default Dark+",
   "git.postCommitCommand": "sync",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.colorTheme": "Gruvbox ish Dark Hard",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "FiraCode NF",
+  "editor.fontWeight": "500",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "window.menuBarVisibility": "toggle",
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.shellArgs.windows": ["-nologo"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.renderWhitespace": "none",
+  "prettier.eslintIntegration": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }
