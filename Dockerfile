@@ -16,7 +16,28 @@ RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
 
 # install
-RUN sudo apt-get install unzip -y
+#RUN sudo apt-get install unzip -y
+
+Run sudo apt-get install -y  \
+    openssl \
+    net-tools \
+    openvpn \
+    jq \
+    git \
+    tree \
+    locales \
+    curl \
+    dumb-init \
+    wget \
+    httpie \
+    nodejs \
+    python \
+    python3-pip \
+    openssh-client \
+    unzip \
+npm install -g npm && \
+apt clean && \
+rm -rf /var/lib/apt/lists/*
 
 #rclone (support for remote filesystem)
 RUN curl https://rclone.org/install.sh | sudo bash
