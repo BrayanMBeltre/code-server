@@ -3,7 +3,7 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": true,
-  "workbench.colorTheme": "Gruvbox ish Dark Hard",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "FiraCode NF",
   "editor.fontWeight": "500",

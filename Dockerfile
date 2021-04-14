@@ -21,7 +21,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-RUN code-server --install-extension esbenp.prettier-vscode  sainnhe.gruvbox-material dsznajder.es7-react-js-snippets kiteco.kite PKief.material-icon-theme CoenraadS.bracket-pair-colorizer-2 christian-kohler.path-intellisense bradlc.vscode-tailwindcss
+RUN code-server --install-extension sainnhe.gruvbox-material dsznajder.es7-react-js-snippets kiteco.kite PKief.material-icon-theme CoenraadS.bracket-pair-colorizer-2 christian-kohler.path-intellisense bradlc.vscode-tailwindcss
 
 # Install packages:
 RUN curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
@@ -47,13 +47,13 @@ RUN sudo apt-get install -y zsh && \
 RUN sudo apt-get clean
 
 # Use bash shell
-ENV SHELL=/bin/bash
+ENV SHELL=/bin/zsh
 
 # NPM: Packages
 RUN sudo npm install -g npm@latest webpack-cli create-react-app gatsby gulp netlify-cli @aws-amplify/cli @storybook/cli
 
 # Copy files:
-# COPY deploy-container/myTool /home/coder/myTool
+COPY deploy-container/myTool /home/coder/
 
 # -----------
 
