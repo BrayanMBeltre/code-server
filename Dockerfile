@@ -3,8 +3,8 @@ FROM codercom/code-server:latest
 
 USER coder
 
-# Apply VS Code settings
-COPY deploy-container/settings.json .local/share/code-server/User/settings.json
+# Fix permissions for code-server
+RUN sudo chown -R coder:coder /home/coder/.local
 
 # Shell: ZSH
 RUN apt install -y zsh && \
@@ -32,8 +32,8 @@ RUN curl https://rclone.org/install.sh | sudo bash
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
-# Fix permissions for code-server
-RUN sudo chown -R coder:coder /home/coder/.local
+# Apply VS Code settings
+COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 
 # You can add custom software and dependencies for your environment below
 # -----------
