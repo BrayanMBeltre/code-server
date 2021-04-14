@@ -47,7 +47,7 @@ RUN sudo apt-get install -y zsh && \
 ENV SHELL=/bin/bash
 
 # NPM: Packages
-RUN npm install -g webpack-cli create-react-app gatsby gulp netlify-cli @aws-amplify/cli @storybook/cli
+RUN sudo npm install -g webpack-cli create-react-app gatsby gulp netlify-cli @aws-amplify/cli @storybook/cli
 
 # Copy files:
 # COPY deploy-container/myTool /home/coder/myTool
