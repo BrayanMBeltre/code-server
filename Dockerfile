@@ -27,7 +27,7 @@ RUN code-server --install-extension PKief.material-icon-theme
 RUN code-server --install-extension CoenraadS.bracket-pair-colorizer-2
 RUN code-server --install-extension christian-kohler.path-intellisense
 RUN code-server --install-extension bradlc.vscode-tailwindcss
-RUN code-server --install-extension GulajavaMinistudio.mayukaithemevsc
+#RUN code-server --install-extension GulajavaMinistudio.mayukaithemevsc
 
 # Install packages:
 RUN curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
